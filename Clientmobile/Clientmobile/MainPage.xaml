@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Clientmobile"
+             x:Class="Clientmobile.MainPage">
+  <ScrollView>
+   <StackLayout>
+     <Entry  x:Name="Txtname" Placeholder="Name"  />
+     <Entry x:Name="Txtage" Placeholder="Age"   />
+     <Button  x:Name="ButtonPost"  Text="Post" Clicked="ButtonPost_OnClicked" />
+   
+     <Entry x:Name="TxtEmployeeId" Placeholder="EmployeeId"   />
+     <Entry  x:Name="Txtname1" Placeholder="Name"  />
+     <Entry x:Name="Txtage1" Placeholder="Age"   />
+     <Button  x:Name="ButtonPut"  Text="Put" Clicked="ButtonPut_OnClicked" />
+   
+     <Entry x:Name="TxtEmployeeId1" Placeholder="EmployeeId"   />
+     <Button  x:Name="ButtonDelete"  Text="Delete" Clicked="ButtonDelete_OnClicked" />
+   
+     <Button  x:Name="ButtonGet"  Text="Get" Clicked="ButtonGet_OnClicked" />
+     <ListView  x:Name="MainListView">
+       <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout Orientation="Vertical">
+              <Label Text="{Binding EmployeeId}" />
+              <Label Text="{Binding Name}" />
+              <Label Text="{Binding Age}" />
+              <Label Text="{Binding DepartementId}" />
+              </StackLayout>
+          </ViewCell> 
+          </DataTemplate>   
+       </ListView.ItemTemplate>       
+     </ListView> 
+   </StackLayout>
+    </ScrollView>
+</ContentPage>
